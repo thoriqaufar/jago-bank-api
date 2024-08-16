@@ -40,7 +40,7 @@ Create Docker Image
   docker compose build
 ```
 
-Run Docker
+Start Docker Container
 
 ```bash
   docker compose up -d
