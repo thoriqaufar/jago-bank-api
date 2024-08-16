@@ -22,5 +22,5 @@ func main() {
 	router.WalletRouter(api)
 	router.TransactionRouter(api)
 
-	r.Run(":8080")
+	r.Run(":8090")
 }

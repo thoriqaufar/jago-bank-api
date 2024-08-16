@@ -10,7 +10,8 @@ import (
 var DB *gorm.DB
 
 func NewDatabase() {
-	dsn := "root:@tcp(localhost:3306)/jago_bank?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:rootpassword@tcp(mysql:3306)/jago_bank?charset=utf8mb4&parseTime=True&loc=Local"
+	//dsn := "root:@tcp(localhost:3306)/jago_bank?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	helper.PanicIfError(err)
 
