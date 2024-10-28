@@ -1,17 +1,12 @@
-# Jago Bank API
+
+# Inventory Management App
 
 ## Tech Stack
-- Golang : https://github.com/golang/go
-- MySQL (Database) : https://github.com/mysql/mysql-server
-- Apache Kafka : https://github.com/apache/kafka
-- Docker : https://github.com/docker
-
-## Frameworks & Library
-- Gin Gonic : https://github.com/gin-gonic/gin
-- GORM : https://github.com/go-gorm/gorm
-- Golang JWT (Authentication) : https://github.com/golang-jwt/jwt
-- Go Playgroun Validator (Validation) : https://github.com/go-playground/validator
-- Confluent Kafka Go : https://github.com/confluentinc/confluent-kafka-go
+- PHP Laravel
+- HTML
+- CSS
+- React
+- MySQL
 
 
 
@@ -20,30 +15,60 @@
 Clone the project
 
 ```bash
-  git clone git@github.com:thoriqaufar/jago-bank-api.git [your_directory]
+git clone git@github.com:thoriqaufar/inventory-management.git inventory-management
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project [your_directory]
+cd inventory-management
 ```
 
-Install dependencies
+Install backend dependencies
 
 ```bash
-  go get
+composer install
 ```
 
-Create Docker Image
+Setup environment
 
 ```bash
-  docker compose build
+cp .env.example .env
 ```
 
-Start Docker Container
+Update database information in .env
 
 ```bash
-  docker compose up -d
+DB_CONNECTION=your_db
+DB_HOST=your_db_host
+DB_PORT=your_db_port
+DB_DATABASE=your_db_name
+DB_USERNAME=your_db_username
+DB_PASSWORD=your_db_password
 ```
 
+Run migration and seeder
+
+```bash
+php artisan migrate
+php artisan db:seed
+```
+
+Start the backend server
+
+```bash
+php artisan serve
+```
+
+Install frontend dependencies
+
+```bash
+cd frontend
+npm i
+```
+
+Start the frontend server
+
+```bash
+npm run dev
+```
